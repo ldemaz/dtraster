@@ -1,0 +1,19 @@
+Package: dtraster
+Type: Package
+Title: Raster operations with data.table
+Version: 0.1
+Date: 2015-07-17
+Author: Lyndon Estes
+Maintainer: Who to complain to <yourfault@somewhere.net>
+Description: A collection of functions for performing raster operations with
+    data.tables. Initial idea and function from etiennebr,
+    gist.github.com/etiennebr/9515738/
+Depends:
+    R (>= 3.0.0),
+    raster,
+    data.table
+Imports:
+    raster,
+    data.table
+License: GPL (>= 3)
+
