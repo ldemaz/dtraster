@@ -9,5 +9,9 @@ This package is very initial and rough, but will be built on. Some advantages fo
 
 On the latter point, `dt_aggregate` tries to accomplish this. It is still significantly slower then `raster::aggregate` on a larger raster in terms of performing a straight mean, but I wrote it because I couldn't figure out how to do a weighted mean aggregation with the raster package, so this was my solution. It should get faster with some attention. 
 
+# Installation
 
- 
+```
+devtools::install_github("ldemaz/dtraster")
+library(dtraster)
+```
