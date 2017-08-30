@@ -95,10 +95,9 @@ dt_aggregate <- function(xdt, nr, nc, fact, funexpr, dxy, outname,
   aggr <- as.data.table.raster(r, xy = TRUE)
   setnames(aggr, "layer", "ID")
   setkey(aggr, "ID")
-  onm <- parse(text = outname)
 
   # perform aggregation function (pretty fast down here)
-  aggr[, eval(onm) := DT[, eval(funexpr), by = .(ac, ar)][, V1]]  # assign var
+  aggr[, (outname) := DT[, eval(funexpr), by = .(ac, ar)][, V1]]  # assign var
   if(dropid == TRUE) aggr[, ID := NULL]
   aggr <- na.omit(aggr)
   return(aggr)
